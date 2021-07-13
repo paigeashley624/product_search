@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    Testing!
+    <id id="product_list" class="experiment-block">
+      <div>
+        <input type="text" placeholder="Search.." />
+        <button>enter</button>
+      
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+          </thead>
+          <tr v-for="product in products">
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+          </tr>
+        </table>
+      </div>
+      </id>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#product_list",
+        data: {
+          products: [
+            { id: 198355, name: "Fancy pen", description: "Write in red or blue!", price: 1000 },
+            { id: 168031, name: "Bad pen", description: "Barely works, not worth the money", price: 2000 },
+            { id: 296110, name: "Fabric softener", description: "From the other leading brand ", price: 1850 },
+            { id: 183544, name: "Coffee cup", description: "Dark blue with an ergonomic handle", price: 1600 },
+            { id: 174200, name: "Desk chair", description: "Your back will thank you", price: 120000 },
+            { id: 203287, name: "Pillow", description: "Soft and cushiony", price: 5000 },
+            { id: 107058, name: "Cactus", description: "Some greenery for your home", price: 2000 },
+            { id: 226912, name: "Desk lamp", description: "Because who wants a dark office?", price: 6000 },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
